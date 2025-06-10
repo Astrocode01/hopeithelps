@@ -1,0 +1,25 @@
+#8 Write a Python program input a string and   to count occurrence of a word in text.
+
+text = input("Enter text: ")
+word = input("Enter word to count: ")
+print("Occurrences:", text.lower().count(word.lower()))
+
+
+
+#From pdf
+
+input_string = input("Enter text: ")
+word = input("Enter a word to count its frequency in the above text: ")
+words = input_string.split()
+freq = words.count(word)
+print(f"The word {word} appears {freq} times in the text.")
+#Or you could define a function. The below code does the same thing as the code above.
+def count_word(text, word):
+    words = text.split()
+    frequency = 0
+    for w in words:
+        if w == word:
+           frequency += 1
+    return frequency
+freq = count_word(input_string, word)
+print(f"The word {word} appears {freq} times in the text.")
