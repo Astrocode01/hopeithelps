@@ -1,0 +1,21 @@
+#3 Write a Python program to define a function named 'is_even_num' that takes a list 'l' as input and returns a list of even numbers.
+
+def is_even_num(l):
+    return [num for num in l if num % 2 == 0]
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Even numbers:", is_even_num(numbers))
+
+
+
+#From pdf
+
+def is_even_num(l):
+    return [x for x in l if x%2 == 0]
+n = int(input("Enter the number of items in the list: "))
+list = []
+for x in range(n):
+    input_num = int(input("Enter a number: "))
+    list.append(input_num)
+even_numbers = is_even_num(list)
+print("List of even numbers:", even_numbers)
