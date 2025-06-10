@@ -1,0 +1,19 @@
+#12 Write a python program to accept file as an input from the user
+Open the file and count the number of characters appear in the file?
+
+ #/home/ubuntu/Desktop
+ with open(file_path,'r') as first_txt:
+ content = first_txt.read()
+ total_characters = len(content)
+ print("Total characters in the file:",total_characters)
+
+
+
+#From pdf
+
+def count_characters(f):
+    file = open(f, "r")
+    return len(file.read())
+source = input("Enter the filename: ")
+count = count_characters(source)
+print(f"The file contains {count} characters")
