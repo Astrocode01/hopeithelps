@@ -1,0 +1,23 @@
+# Write a Python program to input a string and find total number of letters and digits in the given String.
+
+string = input("Enter a string: ")
+letters = sum(c.isalpha() for c in string)
+digits = sum(c.isdigit() for c in string)
+print("Letters:", letters, "Digits:", digits)
+
+
+
+#From pdf
+
+input_string = input("Enter a text: ")
+characters = list(input_string)
+count_letters = 0
+count_digits = 0
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+digits="0123456789"
+for char in characters:
+    if(char.lower() in alphabet):
+       count_letters += 1
+    elif(char in digits):
+       count_digits += 1
+print(f"The above text contains {count_letters} letters and {count_digits} digits.")
