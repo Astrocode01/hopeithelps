@@ -1,0 +1,22 @@
+#6 Write a python Program to generate Fibonacci series using Function. and print the Fibonacci series.
+
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+
+
+#From pdf 
+
+def fibonacci(n):
+    a0 = 0
+    a1 = 1
+    for i in range(n):
+        print(a0, end=",")
+        a2 = a0 + a1
+        a0 = a1
+        a1 = a2
+    print() #for adding newline at the end.
+n = int(input("Enter the number of terms in the series: "))
+fibonacci(n)
