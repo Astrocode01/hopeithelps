@@ -1,0 +1,21 @@
+#7 7)	Write a Python program to take input from the user as a string  and  to reverse a  given string in Python
+
+string = input("Enter a string: ")
+print("Reversed:", string[::-1])
+
+
+
+#From pdf
+
+input_string = input("Enter a string to reverse it: ")
+reversed_string = ''.join(list(reversed(input_string)))
+print(f"Reversed string: {reversed_string}")
+
+#OR
+
+input_string = input("Enter a string to reverse it: ")
+characters = list(input_string) # Converts the string into a character
+list
+characters.reverse()
+reversed_string = ''.join(characters)
+print(f"Reversed string: {reversed_string}")
