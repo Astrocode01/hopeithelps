@@ -1,0 +1,63 @@
+#10 Write a Python program to accept the string from the user and perform the following operations:
+a)	Calculate length of the string
+b)	Check string is palindrome or not
+c)	Check substring of a given string
+d)	Equality check of the Two strings
+
+s1 = input("Enter string 1: ")
+s2 = input("Enter string 2: ")
+
+# a) Length
+print("Length:", len(s1))
+
+# b) Palindrome check
+print("Is palindrome?", s1 == s1[::-1])
+
+# c) Substring check
+sub = input("Enter substring to check: ")
+print("Is substring?", sub in s1)
+
+# d) Equality check
+print("Strings equal?", s1 == s2)
+
+
+
+#From pdf
+
+def str_len(input_str):
+    print(len(input_str))
+def reverse_str(input_str):
+    print(input_str[::-1], end="")
+def match_str(input_str):
+    input_second = input("Enter second string: ")
+    if input_second == input_str:
+        print("Both string match.")
+    else:
+        print("Strings do not match.")
+def palindrome(input_str):
+    if input_str == input_str[::-1]:
+        print("The given string is a palindrome.")
+    else:
+        print("The given string is not a palindrome.")
+def substring(input_str):
+    second_string = input("Enter substring to check for: ")
+    if second_string in input_str:
+        print("The substring exists in the given string.")
+    else:
+        print("The substring could not be found in the given string.")
+selection = int(input("""1. Calculate the length of the string
+2. Check palindrome
+3. Check substring
+4. Check whether two strings are equal
+Enter a number corresponding to the operations above: """))
+input_string = input("Enter a string: ")
+if selection == 1:
+    str_len(input_string)
+elif selection == 2:
+    palindrome(input_string)
+elif selection == 3:
+    substring(input_string)
+elif selection == 4:
+    match_str(input_string)
+else:
+    print("Please enter a valid operation number.")
