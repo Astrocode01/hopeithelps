@@ -1,0 +1,24 @@
+#4Write a python Program to find maximum numbers among three numbers using Function.
+
+def max_of_three(a, b, c):
+    return max(a, b, c)
+
+x, y, z = 10, 20, 15
+print("Maximum:", max_of_three(x, y, z))
+
+
+
+#From pdf
+
+def max(a,b,c):
+if(a>=b and a >=c):
+return a
+elif(b>=c):
+return b
+else:
+return c
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+c = int(input("Enter the third number: "))
+max_number = max(a,b,c)
+print(f"The max of {a}, {b} and {c} is {max_number}")
