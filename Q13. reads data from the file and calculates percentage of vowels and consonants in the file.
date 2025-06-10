@@ -1,0 +1,47 @@
+#13 Write a python program that reads data from the file and calculates percentage of vowels and consonants in the file.
+
+file_path="first.txt"
+ #/home/ubuntu/Desktop
+ with open(file_path,'r') as first_txt:
+ content = first_txt.read()
+vowels = 0
+consonants = 0
+ for i  in content:
+        if i in ['a', 'e', 'i','o', 'u']:
+            vowels+=1
+            break
+        elif i>='a' and i<='z':
+            consonants+=1
+        else:
+            break
+            
+print('No of vowels in file', vowels)
+print('NO of consonants in file', consonants)
+
+
+#From pdf
+
+def vowels_percent(f, total):
+    file = open(f, "r")
+    vowels = "aeiou"
+    count = 0
+    for character in list(file.read()):
+        if(character.lower() in vowels):
+            count+=1
+    return (count/total)*100
+def consonant_percent(f, total):
+    file = open(f, "r")
+    consonants = "bcdfghjklmnpqrstvwxyz"
+    count = 0
+    for character in list(file.read()):
+        if(character.lower() in consonants):
+            count+=1
+    return (count/total)*100
+def count_total_characters(f):
+    file = open(f, "r")
+    return len(file.read())
+source = input("Enter the filename: ")
+total = count_total_characters(source)
+v_percent = vowels_percent(source,total)
+c_percent = consonant_percent(source, total)
+print(f"{v_percent}% of the file is vowels and {c_percent}% of the file is consonants.")
